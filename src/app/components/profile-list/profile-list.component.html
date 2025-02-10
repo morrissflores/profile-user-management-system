@@ -1,0 +1,26 @@
+<h2>Profile User Management System</h2>
+<button class="btn btn-primary" (click)="goToAddProfile()">Add Profile</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let profile of profiles">
+            <td>{{profile.id}}</td>
+            <td>{{profile.firstName}}</td>
+            <td>{{profile.lastName}}</td>
+            <td>{{profile.birthDate}}</td>
+            <td>{{profile.gender}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteProfile(profile.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
